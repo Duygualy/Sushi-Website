@@ -1,0 +1,120 @@
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.crazy-card {
+  background: linear-gradient(145deg, #ac1414, #ffffff);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  transform: perspective(800px) rotateY(0deg);
+  transition: transform 0.4s, box-shadow 0.3s;
+  width: 220px;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.crazy-card.selected {
+  margin: 0 auto;
+  width: 300px;
+  height: auto;
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.card-wrapper.single-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  min-height: 100vh;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.crazy-card:hover {
+  transform: perspective(800px) rotateY(5deg) scale(1.03);
+  box-shadow: 0 30px 60px rgba(255, 107, 107, 0.5);
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.crazy-card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+.card-info {
+  padding: 1rem;
+  text-align: center;
+  color: black;
+}
+
+.view-btn {
+  margin-top: 0.5rem;
+  padding: 0.4rem 1rem;
+  border: none;
+  background: #ff6b6b;
+  color: white;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.view-btn:hover {
+  background: #ff3b3b;
+}
+
+.ingredients {
+  background: rgba(225, 87, 87, 0.36);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 40px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: black;
+}
+
+.ingredients ul {
+  padding-left: 1rem;
+  color: black;
+  list-style-type: none;
+}
+
+.ingredients li {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  border-radius: 999px;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  z-index: 25;
+}
+
+.close-btn:hover {
+  background: rgba(255,255,255,0.4);
+  transform: scale(1.15);
+  transition: transform 0.2s, background 0.2s;
+}
+
+
